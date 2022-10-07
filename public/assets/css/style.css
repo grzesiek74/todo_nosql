@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 60%;
+    margin: 50px auto;
+    font-family: Verdana;
+    background: #1f4037;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.app-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.one-task, .task-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-head {
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.delete-task {
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    background-color: rgb(221, 116, 116);
+    border: 1px solid rgb(128, 49, 49);
+    border-radius: 3px;
+    color: rgb(48, 45, 45);
+    transition: background-color .3s;
+    cursor: pointer;
+}
+
+.delete-task:hover {
+    background-color: rgb(169, 75, 75);
+}
+
+.new-task-form {
+    margin-top: 50px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-task-title {
+    color: rgb(235, 235, 235);
+}
+
+.task-input {
+    width: 300px;
+    margin: 20px 0 10px 0;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.task-input::placeholder {
+    font-style: italic;
+    color: white;
+}
+
+.save-task {
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 5px 10px;
+    background-color: rgb(116, 169, 221);
+    border: 1px solid rgb(49, 81, 128);
+    border-radius: 2px;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+
+.save-task:hover {
+    background-color: rgb(74, 125, 176);
+}
+
+.task-action {
+    padding: 15px;
+    border: 1px solid rgb(160, 160, 160);
+    background-color: rgb(233, 233, 233);
+}
+
+.go-home {
+    display: block;
+    width: 30%;
+    padding: 5px 10px;
+    color: black;
+    border: 1px solid rgb(160, 160, 160);
+    background-color: rgb(233, 233, 233);
+    text-decoration: none;
+    transition: border .3s, background-color .3s, color .3s;
+}
+
+.go-home:hover {
+    border: 1px solid #2e5649;
+    background-color: #69ac8f;
+    color: #e9e9e9;
+}
+
+.error {
+    background: #eab5b5;
+    border: 2px solid red;
+    padding: 20px;
+    margin: 10px auto;
+    width: 80%;
+}

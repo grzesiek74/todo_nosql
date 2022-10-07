@@ -1,0 +1,32 @@
+<h2 class='app-title'>Your tasks to do</h2>
+<ul class='task-list'>
+  <div class='task-head'>
+    <p>Task name</p>
+    <p>Action</p>
+  </div>
+  {{#each allTasks}}
+    <div class='one-task'>
+      <li>{{this.title}}</li>
+      <form method='POST' action='/todos/{{this._id}}?_method=DELETE'>
+        <button type='submit' class='delete-task'>Remove</button>
+      </form>
+    </div>
+  {{else}}
+    <h2 class='nothing-to-do'>You have not tasks to do...</h2>
+  {{/each}}
+</ul>
+
+<div class='new-task-form'>
+  <h2 class='new-task-title'>Add new task</h2>
+  <form action='/todos' method='POST'>
+    <label>
+      <p><input
+          class='task-input'
+          type='text'
+          name='title'
+          placeholder='Enter your task'
+        /></p>
+    </label>
+    <button class='save-task'>Save</button>
+  </form>
+</div>
